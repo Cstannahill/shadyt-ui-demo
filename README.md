@@ -1,5 +1,3 @@
-Here is the corrected and finalized **`README.md`** for your library, now properly reflecting the `shadyt-ui/mdb` branding, your authorship, and modular direction.
-
 ---
 
 ## 📘 `README.md`
