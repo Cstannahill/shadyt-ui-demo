@@ -1,0 +1,33 @@
+---
+title: Breadcrumbs
+description: A navigation component that displays the user’s current location in a hierarchy.
+---
+
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `Breadcrumbs`
+
+Shows the path of nested pages or navigation states to help users stay oriented.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <Breadcrumbs
+    items={[
+      { label: "Home", href: "/" },
+      { label: "Docs", href: "/docs" },
+      { label: "Components" },
+    ]}
+  />
+
+```
+
+</CodeBlockWrapper>
+
+<Divider />
+```

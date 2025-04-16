@@ -1,0 +1,33 @@
+---
+title: ShowcaseRow
+description: A horizontally scrolling or grid-aligned section for displaying product cards, logos, or app screenshots.
+---
+
+import ShowcaseRow from "@/components/blocks/ShowcaseRow";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `ShowcaseRow`
+
+A flexible visual row for highlighting logos, media, cards, or key integrations in a scrolling or responsive layout.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <ShowcaseRow
+    items={[
+      { src: "/images/logos/mongodb.svg", alt: "MongoDB" },
+      { src: "/images/logos/vercel.svg", alt: "Vercel" },
+      { src: "/images/logos/nextjs.svg", alt: "Next.js" },
+    ]}
+  />
+
+```
+</CodeBlockWrapper>
+
+<Divider />
+
+```

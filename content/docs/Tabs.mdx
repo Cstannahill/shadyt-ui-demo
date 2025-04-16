@@ -1,0 +1,35 @@
+---
+title: Tabs
+description: A horizontal tab interface for switching between views or content panels.
+---
+
+import Tabs from "@/components/navigation/Tabs";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `Tabs`
+
+A simple tabbed navigation component for toggling between related content sections.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <Tabs
+    tabs={[
+      { label: "Overview", value: "overview" },
+      { label: "Features", value: "features" },
+      { label: "Pricing", value: "pricing" },
+    ]}
+    activeTab="features"
+    onTabChange={(tab) => console.log("Switched to:", tab)}
+  />
+
+```
+
+</CodeBlockWrapper>
+
+<Divider />
+```

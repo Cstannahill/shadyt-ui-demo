@@ -1,0 +1,116 @@
+---
+title: PricingCard
+description: A structured card used to display pricing plans, tiers, and feature breakdowns.
+---
+
+import PricingCard from "@/components/ui/cards/PricingCard";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import PropsTable from "@/components/mdb/components/docs/PropsTable";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `PricingCard`
+
+A component for showcasing subscription tiers, feature sets, or payment plans in a clean and comparative layout.
+
+<Divider />
+
+## ✨ Overview
+
+`PricingCard` is perfect for:
+
+- Highlighting pricing tiers with a clear call to action
+- Presenting included features, value props, and plan badges
+- Supporting toggleable billing cycles (e.g., monthly/yearly)
+- Matching modern SaaS pricing grids
+
+<Divider />
+
+## 📦 Props
+
+<PropsTable
+  of="PricingCard"
+  rows={[
+    {
+      name: "title",
+      type: "string",
+      required: true,
+      description: "Name of the plan or tier",
+    },
+    {
+      name: "price",
+      type: "string",
+      required: true,
+      description: "Formatted price string (e.g. `$29/mo`)",
+    },
+    {
+      name: "features",
+      type: "string[]",
+      required: true,
+      description: "List of features or benefits included in the plan",
+    },
+    {
+      name: "highlighted",
+      type: "boolean",
+      required: false,
+      default: "false",
+      description: "Visually emphasize this plan (recommended plan, etc.)",
+    },
+    {
+      name: "ctaLabel",
+      type: "string",
+      required: false,
+      default: "Get Started",
+      description: "Text for the call-to-action button",
+    },
+    {
+      name: "ctaHref",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Optional link target for the CTA button",
+    },
+    {
+      name: "className",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Custom styles for the card container",
+    },
+  ]}
+/>
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+
+```tsx
+<PricingCard
+  title="Pro"
+  price="$49/mo"
+  features={["Unlimited projects", "Team collaboration", "Priority support"]}
+/>
+```
+
+</CodeBlockWrapper>
+
+<Divider />
+
+<CodeBlockWrapper language="tsx">
+
+## ⭐ Highlighted Plan
+
+```tsx
+<PricingCard
+  title="Growth"
+  price="$99/mo"
+  features={["All Pro features", "Advanced analytics", "Dedicated onboarding"]}
+  highlighted
+  ctaLabel="Upgrade Now"
+  ctaHref="/upgrade"
+/>
+```
+
+</CodeBlockWrapper>
+<Divider />

@@ -1,0 +1,33 @@
+---
+title: FormRow
+description: A layout block for organizing multiple form fields into rows with responsive spacing.
+---
+
+import FormRow from "@/components/layout/forms/FormRow";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `FormRow`
+
+Used to horizontally align multiple fields inside a form — typically used inside `Form`.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+
+```tsx
+<FormRow>
+  <div className="w-full">
+    <label htmlFor="firstName">First Name</label>
+    <input id="firstName" type="text" className="input" />
+  </div>
+  <div className="w-full">
+    <label htmlFor="lastName">Last Name</label>
+    <input id="lastName" type="text" className="input" />
+  </div>
+</FormRow>
+```
+
+</CodeBlockWrapper>

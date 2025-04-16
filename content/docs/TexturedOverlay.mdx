@@ -1,0 +1,32 @@
+---
+title: TexturedOverlay
+description: A wrapper that applies a full-area background texture beneath layered content.
+---
+
+import TexturedOverlay from "@/components/overlays/TexturedOverlay";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `TexturedOverlay`
+
+Applies a textured background (image or pattern) behind your content for visual depth and contrast.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <TexturedOverlay textureUrl="/textures/grid-noise.png">
+    <div className="text-center py-16">
+      <h2 className="text-3xl font-bold">Stylish Section</h2>
+      <p className="text-muted">This area stands out with texture and contrast.</p>
+    </div>
+  </TexturedOverlay>
+
+```
+
+</CodeBlockWrapper>
+
+<Divider />
+```

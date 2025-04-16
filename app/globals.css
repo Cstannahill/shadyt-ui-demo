@@ -1,19 +1,17 @@
-@import "tailwindcss";
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+/* @import "tailwindcss/components.css" layer(components); */
+@import "tailwindcss/utilities.css" layer(utilities);
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
     --background: #0a0a0a;
     --foreground: #ededed;
   }
@@ -21,6 +19,158 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* color: var(--foreground); */
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+body {
+  @apply bg-zinc-900 text-zinc-100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h3 code {
+  @apply !text-lg md:!text-xl;
+}
+
+pre {
+  @apply !px-0 rounded-lg;
+}
+
+code {
+  @apply text-sm md:text-base !leading-loose;
+}
+
+pre > code {
+  counter-reset: line;
+}
+
+code[data-theme*=" "],
+code[data-theme*=" "] span {
+  color: var(--github-light);
+  background-color: var(--github-light-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  code[data-theme*=" "],
+  code[data-theme*=" "] span {
+    color: var(--github-dark);
+    background-color: var(--github-dark-bg);
+  }
+}
+
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  @apply inline-block w-4 mr-4 text-right text-gray-500;
+}
+
+.prose {
+  @apply max-w-[55rem] sm:text-lg md:text-xl !leading-7 sm:!leading-9;
+}
+
+pre [data-line] {
+  @apply px-4 border-l-2 border-l-transparent;
+}
+
+[data-highlighted-line] {
+  background: rgba(200, 200, 255, 0.1);
+  @apply border-l-blue-400;
+}
+
+[data-highlighted-chars] {
+  @apply bg-zinc-600/50 rounded;
+  box-shadow: 0 0 0 4px rgb(82 82 91 / 0.5);
+}
+
+[data-chars-id] {
+  @apply shadow-none p-1 border-b-2;
+}
+
+[data-chars-id] span {
+  @apply !text-inherit;
+}
+
+[data-chars-id="v"] {
+  @apply !text-pink-300 bg-rose-800/50 border-b-pink-600 font-bold;
+}
+
+[data-chars-id="s"] {
+  @apply !text-yellow-300 bg-yellow-800/50 border-b-yellow-600 font-bold;
+}
+
+[data-chars-id="i"] {
+  @apply !text-purple-200 bg-purple-800/50 border-b-purple-600 font-bold;
+}
+
+[data-rehype-pretty-code-title] {
+  @apply bg-zinc-700 text-zinc-200 rounded-t-lg py-2 px-3 font-semibold text-sm;
+}
+
+figure[data-rehype-pretty-code-figure]:has(> [data-rehype-pretty-code-title])
+  pre {
+  @apply !rounded-t-none;
+}
+
+figure {
+  @apply mb-6 mt-1;
+}
+pre,
+code,
+figure {
+  @apply overflow-x-auto;
+}
+p {
+  @apply text-xl;
+}
+article p {
+  @apply leading-9;
+}
+
+.doc-content {
+  width: 80% !important;
+  max-width: none !important;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+}
+
+#doc-content {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.cta-bottom {
+  @apply justify-center;
+  padding: -5px;
+  margin: 0 auto;
+}
+
+.target-texture-overlay {
+  border-radius: 50%;
+}
+
+.heading-anchor {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.heading-anchor::before {
+  content: "#";
+  position: absolute;
+  left: -1.25em;
+  opacity: 0.3;
+}
+
+.cg-problem {
+  width: 100vw !important;
+  max-width: 100%;
+  height: 100% !important;
+}
+
+.target-for-font {
+  font-family: "Geist Sans", sans-serif;
 }

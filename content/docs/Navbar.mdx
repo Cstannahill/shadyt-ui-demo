@@ -1,0 +1,34 @@
+---
+title: Navbar
+description: A top-level navigation bar for branding and primary links.
+---
+
+import Navbar from "@/components/navigation/Navbar";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `Navbar`
+
+A responsive navigation container typically used at the top of your app or site.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <Navbar>
+    <div className="text-lg font-bold">MyApp</div>
+    <nav className="space-x-4">
+      <a href="/features">Features</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </Navbar>
+
+```
+
+</CodeBlockWrapper>
+
+<Divider />
+```

@@ -1,0 +1,89 @@
+---
+title: FloatingCard
+description: A raised, hoverable card with optional scale and glow effect.
+---
+
+import FloatingCard from "@/components/ui/cards/FloatingCard";
+import ScaleOnHover from "@/components/animations/ScaleOnHover";
+import { Divider } from "@/components/mdb/components/docs/Divider"; // Optional helper
+import PropsTable from "@/components/mdb/components/docs/PropsTable"; // Shared table renderer
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# FloatingCard
+
+A visually elevated card component with subtle hover lift and glowing border support via animation wrappers.  
+Used to display content in a way that feels tactile and engaging.
+
+<Divider />
+
+## ✨ Overview
+
+`FloatingCard` is designed to:
+
+- Provide subtle elevation with hover feedback
+- Support `ScaleOnHover` or `GlowPulse` for visual emphasis
+- Look and feel like layered UI paper
+- Be fully composable — pass in any children
+
+<Divider />
+
+## 📦 Props
+
+<PropsTable
+  of="FloatingCard"
+  rows={[
+    {
+      name: "children",
+      type: "ReactNode",
+      required: true,
+      default: "-",
+      description: "The content inside the card",
+    },
+    {
+      name: "className",
+      type: "string",
+      required: false,
+      default: "rounded-lg shadow-md",
+      description: "Optional Tailwind styles for outer card",
+    },
+  ]}
+/>
+
+<Divider />
+
+## 🧠 Design Intent
+
+- Subtle elevation and paper feel
+- Smooth `transition` and `scale` on hover
+- Optional glowing accent via wrapper
+- Dark-mode friendly (works well with `bg-white/5`, `text-white`, etc.)
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <FloatingCard className="bg-brand-dark p-6">
+    <h3 className="text-lg font-semibold">Start Free</h3>
+    <p className="text-sm opacity-70">Build something fast and beautiful.</p>
+  </FloatingCard>
+  ```
+</CodeBlockWrapper>
+
+<Divider />
+
+## 💡 With Animation Wrapper
+
+<CodeBlockWrapper language="tsx">
+```tsx
+<ScaleOnHover glowColor="#00ED64" scaleAmount={1.05}>
+  <FloatingCard className="bg-brand-dark p-6">
+    <h3 className="text-lg font-semibold">Start Free</h3>
+    <p className="text-sm opacity-70">Build something fast and beautiful.</p>
+  </FloatingCard>
+</ScaleOnHover>
+
+```
+</CodeBlockWrapper>
+```

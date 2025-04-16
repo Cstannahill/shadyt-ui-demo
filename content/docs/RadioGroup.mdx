@@ -1,0 +1,33 @@
+---
+title: RadioGroup
+description: A grouped set of radio buttons for choosing a single option.
+---
+
+import RadioGroup from "@/components/inputs/RadioGroup";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `RadioGroup`
+
+A styled and accessible radio group for selecting one option from a list.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <RadioGroup
+    name="plan"
+    label="Choose a Plan"
+    options={[
+      { label: "Free", value: "free" },
+      { label: "Pro", value: "pro" },
+      { label: "Enterprise", value: "enterprise" },
+    ]}
+  />
+
+```
+</CodeBlockWrapper>
+<Divider />
+```

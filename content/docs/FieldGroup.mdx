@@ -1,0 +1,27 @@
+---
+title: FieldGroup
+description: A vertical or horizontal grouping wrapper for form fields or inputs.
+---
+
+import FieldGroup from "@/components/layout/forms/FieldGroup";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `FieldGroup`
+
+A wrapper used to group related form elements — useful for styling and layout control in stacked or inline forms.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+
+```tsx
+<FieldGroup>
+  <label htmlFor="email">Email</label>
+  <input id="email" type="email" className="input" />
+</FieldGroup>
+```
+
+</CodeBlockWrapper>

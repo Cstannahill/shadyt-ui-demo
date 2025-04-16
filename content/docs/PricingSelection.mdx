@@ -1,0 +1,41 @@
+---
+title: PricingSelection
+description: A pricing section block displaying multiple plans or tiers with feature breakdowns.
+---
+
+import PricingSelection from "@/components/blocks/PricingSelection";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `PricingSelection`
+
+A ready-to-use pricing layout that presents multiple plans for user comparison and selection.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <PricingSelection
+    plans={[
+      {
+        title: "Starter",
+        price: "$0",
+        features: ["1 Project", "Community Support"],
+      },
+      {
+        title: "Pro",
+        price: "$49/mo",
+        features: ["Unlimited Projects", "Priority Support", "Team Access"],
+        highlighted: true,
+      },
+    ]}
+  />
+
+```
+</CodeBlockWrapper>
+
+<Divider />
+
+```

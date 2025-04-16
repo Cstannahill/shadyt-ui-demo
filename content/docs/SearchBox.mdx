@@ -1,0 +1,28 @@
+---
+title: SearchBox
+description: A styled search input field for quick filtering or querying.
+---
+
+import SearchBox from "@/components/inputs/SearchBox";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `SearchBox`
+
+A responsive search input field with optional icons and submit handling.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <SearchBox
+    placeholder="Search documentation..."
+    onSubmit={(value) => console.log("Searching for:", value)}
+  />
+
+```
+</CodeBlockWrapper>
+<Divider />
+```

@@ -1,0 +1,29 @@
+---
+title: Form
+description: A flexible form container with consistent spacing, alignment, and optional submit styling.
+---
+
+import Form from "@/components/layout/forms/Form";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `Form`
+
+A wrapper component for handling form layout, spacing, and structure consistently across views.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+
+```tsx
+<Form onSubmit={(e) => e.preventDefault()}>
+  <input type="text" placeholder="Name" className="input" />
+  <button type="submit" className="btn mt-4">
+    Submit
+  </button>
+</Form>
+```
+
+</CodeBlockWrapper>

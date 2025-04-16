@@ -1,0 +1,110 @@
+---
+title: FeatureCard
+description: A promotional card for showcasing a key feature, benefit, or selling point with supporting visuals and text.
+---
+
+import FeatureCard from "@/components/ui/cards/FeatureCard";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import PropsTable from "@/components/mdb/components/docs/PropsTable";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+A responsive, brandable card component for highlighting features or benefits in product, marketing, or onboarding sections.
+
+<Divider />
+
+## ✨ Overview
+
+FeatureCard is ideal for:
+
+- Displaying feature highlights with supporting icon or image
+- Use in grid layouts or single-column feature banners
+- Pairing with CTA buttons for increased conversion
+- Maintaining consistency across product showcases
+
+<Divider />
+
+## 📦 Props
+
+<PropsTable
+  of="FeatureCard"
+  rows={[
+    {
+      name: "title",
+      type: "string",
+      required: true,
+      description: "The main headline or feature name",
+    },
+    {
+      name: "description",
+      type: "string",
+      required: true,
+      description: "A brief description or explanation of the feature",
+    },
+    {
+      name: "icon",
+      type: "ReactNode",
+      required: false,
+      default: "-",
+      description:
+        "Optional icon or image element to visually represent the feature",
+    },
+    {
+      name: "href",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Optional link URL to wrap the card in a clickable anchor",
+    },
+    {
+      name: "className",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Custom class names for outer wrapper styling",
+    },
+  ]}
+/>
+
+<Divider />
+
+## 🧠 Design Intent
+
+- Promote key product or brand capabilities
+- Stay compact and responsive in marketing layouts
+- Communicate clarity through icon + title + description pattern
+- Adaptable to light/dark sections or card backgrounds
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <FeatureCard
+    title="Lightning-fast Performance"
+    description="Built on optimized, tree-shaken components designed for speed and scalability."
+  />
+  ```
+</CodeBlockWrapper>
+<Divider />
+
+## 💡 With Icon
+
+<CodeBlockWrapper language="tsx">
+ ```tsx
+ import { RocketIcon } from "lucide-react";
+<FeatureCard 
+title="Launch-Ready"
+description="Production-quality components out of the box."
+icon={
+    <RocketIcon
+     className="w-6 h-6 text-brand"
+      />
+      }
+       />
+
+```
+</CodeBlockWrapper>
+
+<Divider />
+```

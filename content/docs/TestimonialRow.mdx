@@ -1,0 +1,40 @@
+---
+title: TestimonialRow
+description: A layout block for showcasing multiple testimonials or quotes in a scrollable or grid view.
+---
+
+import TestimonialRow from "@/components/blocks/TestimonialRow";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `TestimonialRow`
+
+A horizontally scrollable or stacked row of testimonials — great for adding social proof to marketing sections.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <TestimonialRow
+    testimonials={[
+      {
+        quote: "This kit saved us months of dev time!",
+        author: "Avery Quinn",
+        title: "CTO, Launchable",
+      },
+      {
+        quote: "The styling is slick and easy to work with.",
+        author: "Jordan Lee",
+        title: "Frontend Engineer",
+      },
+    ]}
+  />
+
+```
+</CodeBlockWrapper>
+
+<Divider />
+
+```

@@ -1,0 +1,122 @@
+---
+title: SpotlightCard
+description: A vibrant, image-driven card ideal for highlighting features, teams, or products.
+---
+
+import SpotlightCard from "@/components/ui/cards/SpotlightCard";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import PropsTable from "@/components/mdb/components/docs/PropsTable";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `SpotlightCard`
+
+A visually striking card layout with image, headline, and optional call-to-action content.  
+Perfect for marketing rows, team features, or app showcases.
+
+<Divider />
+
+## ✨ Overview
+
+`SpotlightCard` is designed to:
+
+- Pair a visual (image/component) with a short blurb
+- Anchor a section with a compelling CTA or highlight
+- Be themeable with light or dark content
+- Support alignment flexibility
+
+<Divider />
+
+## 📦 Props
+
+<PropsTable
+  of="SpotlightCard"
+  rows={[
+    {
+      name: "title",
+      type: "string",
+      required: true,
+      description: "Headline or key feature title",
+    },
+    {
+      name: "subtitle",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Optional supporting text",
+    },
+    {
+      name: "media",
+      type: "ReactNode",
+      required: false,
+      default: "-",
+      description: "Image or component to render in the visual zone",
+    },
+    {
+      name: "reverse",
+      type: "boolean",
+      required: false,
+      default: "false",
+      description: "If true, image appears on the left",
+    },
+    {
+      name: "children",
+      type: "ReactNode",
+      required: false,
+      default: "-",
+      description: "CTA or extra content under the text block",
+    },
+    {
+      name: "className",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Custom class overrides for outer wrapper",
+    },
+  ]}
+/>
+
+<Divider />
+
+## 🧠 Design Intent
+
+- Highlights a visual concept or callout
+- Structured for grid sections or marketing blocks
+- Responsive layout with `reverse` prop
+- Great as a hero sub-section or for feature groups
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <SpotlightCard
+    title="Effortless Deployment"
+    subtitle="Connect, push, and go live in minutes."
+    media={<img src="/images/deploy-graphic.png" alt="Deployment" />}
+  >
+    <button className="btn-primary mt-4">Learn More</button>
+  </SpotlightCard>
+  ```
+</CodeBlockWrapper>
+
+<Divider />
+
+## 💡 With Reverse Prop
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <SpotlightCard
+    title="Team Spotlight"
+    subtitle="Meet the minds behind the magic."
+    reverse
+    media={<img src="/images/team.png" className="rounded-xl shadow-lg" />}
+  >
+    <p className="text-sm text-white/70">
+      16 team members, 4 time zones, 1 mission.
+    </p>
+  </SpotlightCard>
+  ```
+</CodeBlockWrapper>
+
+<Divider />

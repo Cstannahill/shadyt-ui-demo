@@ -1,0 +1,31 @@
+---
+title: Pagination
+description: A component for navigating between pages of content.
+---
+
+import Pagination from "@/components/navigation/Pagination";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `Pagination`
+
+A navigation control for stepping through paginated data or content sections.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <Pagination
+    currentPage={2}
+    totalPages={5}
+    onPageChange={(page) => console.log("Go to page:", page)}
+  />
+
+```
+
+</CodeBlockWrapper>
+
+<Divider />
+```

@@ -1,0 +1,40 @@
+---
+title: FeatureGrid
+description: A responsive block for displaying multiple feature cards or benefits in a grid layout.
+---
+
+import FeatureGrid from "@/components/blocks/FeatureGrid";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `FeatureGrid`
+
+A layout block for showcasing multiple features in a consistent grid, typically using `StackedFeatureCard` or similar.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <FeatureGrid
+    features={[
+      {
+        title: "Fast Integration",
+        description: "Drop in and go — fully composable and themable.",
+        icon: "⚡",
+      },
+      {
+        title: "Built with Tailwind",
+        description: "Powered by utility-first styles with zero config.",
+        icon: "🎨",
+      },
+    ]}
+  />
+
+```
+</CodeBlockWrapper>
+
+<Divider />
+
+```

@@ -1,0 +1,30 @@
+---
+title: SelectInput
+description: A styled dropdown field for selecting one option from a list.
+---
+
+import SelectInput from "@/components/inputs/SelectInput";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `SelectInput`
+
+A `<select>` field component with accessible labeling and custom visual styling.
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <SelectInput label="Status" name="status">
+    <option value="">Choose one</option>
+    <option value="active">Active</option>
+    <option value="archived">Archived</option>
+    <option value="disabled">Disabled</option>
+  </SelectInput>
+
+```
+</CodeBlockWrapper>
+<Divider />
+```

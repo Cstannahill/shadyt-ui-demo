@@ -1,0 +1,164 @@
+---
+title: UserProfileCard
+description: A clean profile card used to display user avatars, names, roles, and optional metadata or actions.
+---
+
+import UserProfileCard from "@/components/ui/cards/UserProfileCard";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import PropsTable from "@/components/mdb/components/docs/PropsTable";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeblockWrapper";
+
+A compact card layout to present user identity — ideal for team directories, member overviews, or profile widgets.
+
+<Divider />
+
+## ✨ Overview
+
+`UserProfileCard` is perfect for:
+
+- Displaying user information in dashboards or profile listings
+- Highlighting teams, contributors, or community members
+- Supporting social or admin actions (e.g. “Follow”, “Edit”, “View Profile”)
+- Integrating into dark/light or branded themes
+
+<Divider />
+
+## 📦 Props
+
+<PropsTable
+  of="UserProfileCard"
+  rows={[
+    {
+      name: "name",
+      type: "string",
+      required: true,
+      description: "Full name of the user",
+    },
+    {
+      name: "role",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "User's role, title, or description",
+    },
+    {
+      name: "avatarUrl",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Optional image URL for user avatar",
+    },
+    {
+      name: "email",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Optional email or contact detail",
+    },
+    {
+      name: "actions",
+      type: "ReactNode",
+      required: false,
+      default: "-",
+      description: "Optional action buttons or links (e.g. follow, edit)",
+    },
+    {
+      name: "className",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Custom wrapper styling overrides",
+    },
+  ]}
+/>
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <UserProfileCard
+    name="Taylor Morgan"
+    role="Full Stack Developer"
+    avatarUrl="/images/avatars/taylor.jpg"
+  />
+```
+
+</CodeBlockWrapper> <Divider />
+
+## ⚙️ With Actions
+
+<CodeBlockWrapper language="tsx">
+
+```tsx
+import { Button } from "@/components/ui/Button";
+<UserProfileCard
+  name="Avery Chen"
+  role="Product Manager"
+  avatarUrl="/images/avatars/avery.png"
+  actions={
+    <Button variant="outline" size="sm">
+      {" "}
+      View Profile
+    </Button>
+  }
+/>;
+```
+
+</CodeBlockWrapper>
+
+<Divider />
+
+## 👥 Team Grid Example
+
+<CodeBlockWrapper language="tsx">
+
+```tsx
+const team = [
+  {
+    name: "Taylor Morgan",
+    role: "Developer Advocate",
+    avatarUrl: "/images/avatars/taylor.jpg",
+  },
+  {
+    name: "Jordan Lee",
+    role: "UX Researcher",
+    avatarUrl: "/images/avatars/jordan.png",
+  },
+  {
+    name: "Sky Park",
+    role: "Frontend Engineer",
+  },
+];
+
+export default function TeamGrid() {
+  return (
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {team.map((user, i) => (
+        <UserProfileCard key={i} {...user} />
+      ))}
+    </div>
+  );
+}
+```
+
+</CodeBlockWrapper> <Divider />
+## 🧠 Design Intent
+Centers the user visually, optimized for name + face recognition
+
+Compact layout suitable for cards, sidebars, or profile overlays
+
+Can scale up with badges, metadata, or action menus
+
+Dark/light mode adaptive with minimal overrides
+
+<Divider />
+
+## Conclusion
+
+UserProfileCard is a versatile, clean identity component for showcasing
+people in a UI. It balances avatar-first design with scalable metadata and call-to-action
+flexibility.
+
+---

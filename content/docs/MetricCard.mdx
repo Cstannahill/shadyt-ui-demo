@@ -1,0 +1,103 @@
+---
+title: MetricCard
+description: A clean, compact component to display KPIs, stats, or summary metrics.
+---
+
+import MetricCard from "@/components/ui/cards/MetricCard";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import PropsTable from "@/components/mdb/components/docs/PropsTable";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `MetricCard`
+
+A concise component used to present key metrics in dashboards, overviews, or feature summaries.
+
+<Divider />
+
+## ✨ Overview
+
+`MetricCard` is designed to:
+
+- Show off KPIs or key data points clearly
+- Work in dark/light contexts
+- Optionally include a sub-label or icon
+- Be composable in a card grid or summary section
+
+<Divider />
+
+## 📦 Props
+
+<PropsTable
+  of="MetricCard"
+  rows={[
+    {
+      name: "label",
+      type: "string",
+      required: true,
+      description: "The title or label for the metric",
+    },
+    {
+      name: "value",
+      type: "string | number",
+      required: true,
+      description: "The main metric or stat",
+    },
+    {
+      name: "subtext",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Optional sublabel or change indicator",
+    },
+    {
+      name: "icon",
+      type: "ReactNode",
+      required: false,
+      default: "-",
+      description: "Optional icon to display next to the label",
+    },
+    {
+      name: "className",
+      type: "string",
+      required: false,
+      default: "bg-white/5",
+      description: "Optional Tailwind styles for the outer card",
+    },
+  ]}
+/>
+
+<Divider />
+
+## 🧠 Design Intent
+
+- Presents data in a clean, glanceable format
+- Ideal for dashboards, reports, or feature blocks
+- Dark-friendly by default
+- Supports flexible layouts (e.g. grid-based)
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <MetricCard label="Users" value="12,482" subtext="+4.3% from last week" />
+  ```
+</CodeBlockWrapper>
+
+<Divider />
+
+## 💡 With Icon + Custom Style
+
+<CodeBlockWrapper language="tsx">
+  ```tsx
+  <MetricCard
+    label="CPU Usage"
+    value="47%"
+    subtext="Stable"
+    icon={<CpuIcon className="w-4 h-4 text-green-400" />}
+    className="bg-brand-dark text-white"
+  />
+  ```
+</CodeBlockWrapper>
+<Divider />

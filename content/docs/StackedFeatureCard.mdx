@@ -1,0 +1,94 @@
+---
+title: StackedFeatureCard
+description: A vertically stacked feature layout with icon, title, and supporting content for use in product or marketing pages.
+---
+
+import StackedFeatureCard from "@/components/ui/cards/StackedFeatureCard";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import PropsTable from "@/components/mdb/components/docs/PropsTable";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `StackedFeatureCard`
+
+A vertically-aligned card for showcasing a key feature with an icon, title, and description—ideal for rows or section-based layouts.
+
+<Divider />
+
+## ✨ Overview
+
+`StackedFeatureCard` is ideal for:
+
+- Marketing or feature sections with vertically-stacked cards
+- Highlighting benefits with icons or custom visuals
+- Working inside grid, flexbox, or sectioned layouts
+- Dark or light themes with minimal overrides
+
+<Divider />
+
+## 📦 Props
+
+<PropsTable
+  of="StackedFeatureCard"
+  rows={[
+    {
+      name: "icon",
+      type: "ReactNode",
+      required: true,
+      description: "Icon or image node shown at the top of the card",
+    },
+    {
+      name: "title",
+      type: "string",
+      required: true,
+      description: "The feature or card heading",
+    },
+    {
+      name: "description",
+      type: "string",
+      required: true,
+      description: "Supporting description or explanation",
+    },
+    {
+      name: "className",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Optional custom Tailwind class overrides",
+    },
+  ]}
+/>
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx">
+
+```tsx
+import { ShieldCheck } from "lucide-react";
+
+{
+  (" ");
+}
+<StackedFeatureCard
+  icon={<ShieldCheck className="w-6 h-6 text-brand" />}
+  title="Secure by Design"
+  description="Built with security-first architecture and best practices baked in."
+/>;
+```
+
+</CodeBlockWrapper> <Divider />
+Divider />
+
+## 🧠 Design Intent
+
+- Keeps visual focus on top-to-bottom storytelling
+- Icon-led with strong semantic structure
+- Easy to drop into themed or textured sections
+- Responsive and elegant in grid layouts
+
+<Divider />
+
+## 🏁 Conclusion
+
+`StackedFeatureCard` brings structure and clarity to feature blocks, onboarding highlights, and landing page sections. Its vertical rhythm and clean spacing make it ideal for content-first design systems.

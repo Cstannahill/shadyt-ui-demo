@@ -1,0 +1,107 @@
+---
+title: TestimonialCard
+description: A quote-style card ideal for showcasing user feedback, endorsements, or team voices.
+---
+
+import TestimonialCard from "@/components/ui/cards/TestimonialCard";
+import { Divider } from "@/components/mdb/components/docs/Divider";
+import PropsTable from "@/components/mdb/components/docs/PropsTable";
+import CodeBlockWrapper from "@/components/mdb/components/docs/CodeBlockWrapper";
+
+# `TestimonialCard`
+
+A styled card for displaying user quotes, testimonials, or brief endorsements.
+
+<Divider />
+
+## ✨ Overview
+
+`TestimonialCard` is designed to:
+
+- Present voice-of-user content with visual credibility
+- Display author name, quote, and optional avatar or title
+- Fit cleanly in rows, grids, or carousel-style layouts
+- Remain themable and readable in dark UIs
+
+<Divider />
+
+## 📦 Props
+
+<PropsTable
+  of="TestimonialCard"
+  rows={[
+    {
+      name: "quote",
+      type: "string",
+      required: true,
+      description: "The main quote or testimonial content",
+    },
+    {
+      name: "author",
+      type: "string",
+      required: true,
+      description: "Name of the person giving the testimonial",
+    },
+    {
+      name: "title",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Optional job title or role of the author",
+    },
+    {
+      name: "avatarUrl",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Optional avatar image URL",
+    },
+    {
+      name: "className",
+      type: "string",
+      required: false,
+      default: "-",
+      description: "Optional styles for the outer card wrapper",
+    },
+  ]}
+/>
+
+<Divider />
+
+## 🧠 Design Intent
+
+- Emphasizes credibility and social proof
+- Small footprint — stackable in rows or sections
+- Works great with avatars, headshots, or initials
+- Designed to blend with other branded surfaces
+
+<Divider />
+
+## 🚀 Basic Usage
+
+<CodeBlockWrapper language="tsx" class="font-mono">
+  ```tsx
+  <TestimonialCard
+    quote="This UI kit was the cleanest I've ever used. Our productivity and vibe skyrocketed."
+    author="Jamie Lennox"
+    title="Product Designer"
+  />
+  ```
+</CodeBlockWrapper>
+
+<Divider />
+
+## 💡 With Avatar
+
+<CodeBlockWrapper language="tsx" className="font-mono">
+  ```tsx
+  <TestimonialCard
+    quote="Everything just worked. It felt like Tailwind and design had a baby."
+    author="Rina Patel"
+    title="Frontend Engineer"
+    avatarUrl="/images/testimonials/rina.png"
+  />
+  ```
+</CodeBlockWrapper>
+
+<Divider />
