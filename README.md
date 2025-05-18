@@ -1,7 +1,4 @@
-## 📘 `README.md`
-
-````md
-# 🧱 shadyt-ui/mdb
+# 🧱 shadyt-ui
 
 A vivid, production-ready React + Tailwind UI library built with **TypeScript**, **Next.js**, and **modern design principles**.
 
